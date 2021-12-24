@@ -1,0 +1,47 @@
+<%= form_with(model: empdetail) do |form| %>
+  <% if empdetail.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(empdetail.errors.count, "error") %> prohibited this empdetail from being saved:</h2>
+
+      <ul>
+        <% empdetail.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :Name, style: "display: block" %>
+    <%= form.text_field :Name %>
+  </div>
+
+  <div>
+    <%= form.label :Age, style: "display: block" %>
+    <%= form.text_field :Age %>
+  </div>
+
+  <div>
+    <%= form.label :Gender, style: "display: block" %>
+    <%= form.text_field :Gender %>
+  </div>
+
+  <div>
+    <%= form.label :Designation, style: "display: block" %>
+    <%= form.text_field :Designation %>
+  </div>
+
+  <div>
+    <%= form.label :contact_number, style: "display: block" %>
+    <%= form.text_field :contact_number %>
+  </div>
+
+  <div>
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_area :address %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

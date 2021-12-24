@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @empdetail %>
+
+<div>
+  <%= link_to "Edit this empdetail", edit_empdetail_path(@empdetail) %> |
+  <%= link_to "Back to empdetails", empdetails_path %>
+
+  <%= button_to "Destroy this empdetail", @empdetail, :confirm => 'Are you sure?', :method => :delete %>
+</div>
