@@ -2,7 +2,7 @@
 
 <h1>Empdetails</h1>
 
-<table>
+<table style="width:80%">
   <tr>
     <th>Name</th>
     <th>Age</th>
@@ -13,12 +13,12 @@
   </tr>
   <% @empdetails.each do |empdetail| %>
   <tr>
-    <td width="80px"><%= empdetail.Name %></td>
-    <td width="50px"><%= empdetail.Age %></td>
-    <td width="50px"><%= empdetail.Gender %></td>
-    <td width="150px"><%= empdetail.Designation %></td>
-    <td width="120px"><%= empdetail.contact_number %></td>
-    <td width="200px"><%= empdetail.address %></td>
+    <td width="10%"><%= empdetail.Name %></td>
+    <td width="5%"><%= empdetail.Age %></td>
+    <td width="5%"><%= empdetail.Gender %></td>
+    <td width="15%"><%= empdetail.Designation %></td>
+    <td width="10%"><%= empdetail.contact_number %></td>
+    <td width="10%"><%= empdetail.address %></td>
     <td> <%= link_to "Show this empdetail", empdetail %> </td>
   </tr>
   <% end %>
