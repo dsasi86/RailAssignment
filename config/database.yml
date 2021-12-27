@@ -5,12 +5,13 @@
 #   gem "sqlite3"
 #
 default: &default
-  adapter: sqlite3
-  # adapter: postgresql
-  # encoding: unicode
-  # username: postgres
-  # password: password
-  # host: localhost
+  # adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
+  username: postgresql
+  password: password
+  host: localhost
+  port: 5432
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
@@ -30,12 +31,6 @@ test:
 production:
   #<<: *default
   adapter: postgresql
-  encoding: unicode
-  username: postgres
-  password: password
-  host: localhost
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
   #database: db/production.sqlite3
   database: employeedetail_production
 
