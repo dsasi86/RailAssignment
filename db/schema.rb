@@ -12,13 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2021_12_22_055619) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "empdetails", force: :cascade do |t|
     t.string "Name"
-    t.decimal "Age"
+    t.integer "Age"
     t.string "Gender"
     t.string "Designation"
     t.string "contact_number"
-    t.string "decimal"
     t.text "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
